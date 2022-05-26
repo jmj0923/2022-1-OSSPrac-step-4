@@ -10,12 +10,10 @@ def result():
    if request.method == 'POST':
       result = dict()
       result['Name'] = request.form.get('Name')
-
       result['StudentNumber'] = request.form.get('StudentNumber')
       result['Gender'] = request.form.get('Gender')
       result['Major'] = request.form.get('Major')
       result['Languages'] = ','.join(request.form.getlist('Programming Languages'))
-
       return render_template("result.html",result = result)
 
 if __name__ == '__main__':
