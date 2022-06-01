@@ -1,0 +1,8 @@
+version: '1' # 파일 규격 버전
+services: # 실행하려는 컨테이너(서비스) 정의
+  test3prac: # 실행할 컨테이너 이름
+    image: tiangolo/uwsgi-nginx-flask:latest # 해당 이미지를 hub에서 자동으로 pull:반드시 latest로
+    ports: # docker run 의 -p 옵션, 포트 설정
+    - "80:80" # 80은 HTTP 기본 포트, 호스트 포트 : 실행할 컨테이너 포트
+    volumes: # docker run 의 -v 옵션, 프로젝트의 디렉터리를 컨테이너의 디렉터리로 연결
+    - ./app:/app # 호스트 현재 디렉터리의 app 디렉터리를 컨테이너의 app 디렉터리로 연결
