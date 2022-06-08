@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  ex3c:
+    container_name: "ex3c"
+    # image vs build
+    # image : 해당 이미지를 기반으로 컨테이너가 실행
+    # build : 빌드와 관련된 경로에 있는 도커파일을 기반으로 이미지를 빌드
+    # build의 하위 옵션 
+    #context(Dockerfile이 있는 경로(절대 or 상대) - dockerfile의 위치가 현재 디렉토리가 아닐 경우)
+    #dockerfile(파일명이 dockerfile이 아닐 경우)
+    build: .
+    image: "ex3:latest" # build한 이미지를 이미지명 ex3, tag latest로 저장
+    ports:
+      - "80:80"
+
