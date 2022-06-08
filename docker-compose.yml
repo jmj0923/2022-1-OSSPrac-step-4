@@ -5,7 +5,6 @@ services:
     container_name: "ex3c"
     build: .
     image: jmj2359/ex3
-    user: root
   production:
     image: jmj2359/ex3:$4.0  
     ports:
