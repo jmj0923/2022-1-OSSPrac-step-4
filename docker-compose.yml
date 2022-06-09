@@ -4,8 +4,8 @@ services:
   ex3c:
     container_name: "ex3c"
     build: .
-    image: jmj2359/ex3d
-    production:
-      image: jmj2359/ex3:$4.0
+    image: jmj2359/ex3
+  production:
+    image: jmj2359/ex3:4.0
     ports:
       - "80:80"
