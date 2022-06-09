@@ -12,7 +12,6 @@ def result():
       result['Name'] = request.form.get('Name')
       result['Univ'] = request.form.get('Univ')
       result['StudentNumber'] = request.form.get('StudentNumber')
-      result['Major'] = request.form.get('Major')
       result['Languages'] = ','.join(request.form.getlist('Programming Languages'))
       return render_template("result.html",result = result)
 
